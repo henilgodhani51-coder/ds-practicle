@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Structures Implementation & Learning Platform</title>
+  
+  <!-- Modern Stylesheets -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/visualizers.css">
+  
+  <!-- KaTeX for crisp mathematical formulas -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="header">
+    <div class="logo-area">
+      <div class="logo-icon">&lt;/&gt;</div>
+      <div class="logo-title">
+        <h1>DS Implementation Hub</h1>
+        <p>Complete Syllabus Modules 1 - 8 &bull; C Programs &bull; Interactive Visualizers</p>
+      </div>
+    </div>
+
+    <div class="header-actions">
+      <div class="search-box">
+        <svg viewBox="0 0 24 24">
+          <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+        </svg>
+        <input type="text" id="searchInput" placeholder="Search topics, algorithms, C code...">
+      </div>
+      <button class="btn btn-secondary btn-sm" id="themeToggle">☀️ Light</button>
+    </div>
+  </header>
+
+  <!-- Main Application Body -->
+  <div class="app-container">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <span>Course Modules</span>
+        <span style="font-size: 0.75rem; background: var(--bg-tertiary); padding: 2px 8px; border-radius: 12px;">8 Modules</span>
+      </div>
+      <div id="sidebarModules">
+        <!-- Dynamically generated module accordion items -->
+      </div>
+    </aside>
+
+    <!-- Main Content Panel -->
+    <main class="content-pane">
+      <div class="content-wrapper">
+        
+        <!-- Breadcrumb & Topic Title -->
+        <div class="breadcrumb" id="breadcrumb">Module 1 &rsaquo; Introduction to Data Structures</div>
+        <h2 class="topic-headline" id="topicHeadline">1.1 Basic Terminology & Classification</h2>
+        
+        <!-- Syllabus Matches -->
+        <div class="syllabus-tag-container" id="syllabusTags">
+          <!-- Dynamic syllabus pills -->
+        </div>
+
+        <!-- Content Tabs -->
+        <nav class="content-tabs">
+          <button class="tab-btn active" data-tab="theory">
+            📖 Concept & Theory
+          </button>
+          <button class="tab-btn" data-tab="visualizer" id="tabBtnVis">
+            ⚡ Interactive Visualizer
+          </button>
+          <button class="tab-btn" data-tab="code">
+            💻 C Implementation
+          </button>
+          <button class="tab-btn" data-tab="complexity">
+            ⏱️ Complexity Analysis
+          </button>
+          <button class="tab-btn" data-tab="quiz">
+            📝 Self-Assessment Quiz
+          </button>
+        </nav>
+
+        <!-- Tab 1: Theory Content -->
+        <section class="tab-content-panel active" id="tab-theory">
+          <div id="theoryContent">
+            <!-- Theory HTML loaded from data.js -->
+          </div>
+        </section>
+
+        <!-- Tab 2: Interactive Visualizer -->
+        <section class="tab-content-panel" id="tab-visualizer">
+          <div id="visualizerCanvasArea">
+            <!-- Dynamic visualizer canvas inserted here -->
+          </div>
+        </section>
+
+        <!-- Tab 3: C Code Implementation -->
+        <section class="tab-content-panel" id="tab-code">
+          <div class="code-container">
+            <div class="code-header">
+              <span class="code-lang-tag">C SOURCE CODE (STANDARD C99/C11)</span>
+              <div class="code-actions">
+                <button class="btn-code" id="btnCopyCode">Copy Code</button>
+                <button class="btn-code" id="btnDownloadCode">Download .c</button>
+              </div>
+            </div>
+            <pre class="code-pre"><code id="codeContentBlock">/* C code will appear here */</code></pre>
+          </div>
+        </section>
+
+        <!-- Tab 4: Complexity Analysis -->
+        <section class="tab-content-panel" id="tab-complexity">
+          <div id="complexityContent">
+            <!-- Complexity metrics cards -->
+          </div>
+        </section>
+
+        <!-- Tab 5: Quiz -->
+        <section class="tab-content-panel" id="tab-quiz">
+          <div id="quizQuestionsContainer">
+            <!-- Interactive Quiz MCQs -->
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/visualizers.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
